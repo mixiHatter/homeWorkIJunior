@@ -6,16 +6,22 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
+        string name;
+        int age;
+        float weight;
+        float height;
+        string profession;
+
         Console.WriteLine("Как Вас зовут?");
-        var name = Console.ReadLine();
+        name = Console.ReadLine();
         Console.WriteLine("Сколько Вам лет?");
-        var age = Console.ReadLine();
+        age = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Какой у вас вес?");
-        var weight = Console.ReadLine();
+        weight = Convert.ToSingle(Console.ReadLine());
         Console.WriteLine("Какой у вас рост?");
-        var height = Console.ReadLine();
+        height = Convert.ToSingle(Console.ReadLine());
         Console.WriteLine("Кем вы работаете?");
-        var profession = Console.ReadLine();
+        profession = Console.ReadLine();
 
         Console.WriteLine($"Вас зовут {name}, вам {age} лет. Ваш вес {weight}кг на рост {height}см. Вы работаете {profession}, всё верно?");
     }
