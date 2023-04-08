@@ -16,10 +16,12 @@ namespace forTestHomeWork
             int WaitingTimeHours;
 
             Console.Write("Сколько людей в очереди:");
+
             peopleCount = Convert.ToInt32(Console.ReadLine());
             WaitingTimeMinutes = peopleCount * appointmentTimeMinutes;
             WaitingTimeHours = WaitingTimeMinutes / 60;
             WaitingTimeMinutes = WaitingTimeMinutes % 60;
+            
             Console.WriteLine($"Ваша очередь подойдёт через {WaitingTimeHours} часов и {WaitingTimeMinutes} минут");
 
         }   
