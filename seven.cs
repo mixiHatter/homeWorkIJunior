@@ -12,19 +12,18 @@ namespace forTestHomeWork
         {
             int peopleCount;
             int appointmentTimeMinutes = 10;
-            int WaitingTimeMinutes;
-            int WaitingTimeHours;
+            int minutesInHours = 60;
+            int waitingTimeMinutes;
+            int waitingTimeHours;
 
             Console.Write("Сколько людей в очереди:");
 
             peopleCount = Convert.ToInt32(Console.ReadLine());
-            WaitingTimeMinutes = peopleCount * appointmentTimeMinutes;
-            WaitingTimeHours = WaitingTimeMinutes / 60;
-            WaitingTimeMinutes = WaitingTimeMinutes % 60;
+            waitingTimeMinutes = peopleCount * appointmentTimeMinutes;
+            waitingTimeHours = waitingTimeMinutes / minutesInHours;
+            waitingTimeMinutes = waitingTimeMinutes % minutesInHours;
             
-            Console.WriteLine($"Ваша очередь подойдёт через {WaitingTimeHours} часов и {WaitingTimeMinutes} минут");
-
+            Console.WriteLine($"Ваша очередь подойдёт через {waitingTimeHours} часов и {waitingTimeMinutes} минут");
         }   
-            
     }
 }
