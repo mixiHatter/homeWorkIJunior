@@ -11,12 +11,9 @@ namespace forTestHomeWork
         static void Main(string[] args)
         {
             string text = "";
-            string breakWhile = "exit";
-            while(text != breakWhile)
-            {
-                text = Console.ReadLine();
-            }
+            string wordToExit = "exit";
+
+            while(text != wordToExit){text = Console.ReadLine();}
         }   
-            
     }
 }
