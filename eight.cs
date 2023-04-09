@@ -11,19 +11,17 @@ namespace forTestHomeWork
         static void Main(string[] args)
         {
             string text;
-            int countRepeat;
+            int countOfRepetitions;
 
             Console.Write("Введите сообщение: ");
             text = Console.ReadLine();
             Console.Write("Введите количество повторений сообщения: ");
-            countRepeat = Convert.ToInt32(Console.ReadLine());
+            countOfRepetitions = Convert.ToInt32(Console.ReadLine());
 
-            while (countRepeat > 0) 
+            for(int i = 0; i < countOfRepetitions;i++)
             {
                 Console.WriteLine(text);
-                countRepeat--;
             }
-        }   
-            
+        }    
     }
 }
