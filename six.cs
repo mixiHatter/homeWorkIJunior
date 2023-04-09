@@ -12,19 +12,17 @@ namespace forTestHomeWork
         {
             int gold;
             int crystalPrice = 5;
-            int crystalCount;
+            int crystals;
             int remaindGold;
-
 
             Console.WriteLine("Добро пожаловать в магазин! Сколько у вас золота?");
             gold = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Кристалл стоит {crystalPrice} голды, какое количество ты хочешь купить?");
 
-            crystalCount = Convert.ToInt32(Console.ReadLine());
-            remaindGold = gold - crystalCount * crystalPrice;
+            crystals = Convert.ToInt32(Console.ReadLine());
+            remaindGold = gold - crystals * crystalPrice;
             
-            Console.WriteLine($"Теперь у тебя {remaindGold} золото и {crystalCount} кристалла.");
-
+            Console.WriteLine($"Теперь у тебя {remaindGold} золото и {crystals} кристалла.");
         }
     }
 }
