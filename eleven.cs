@@ -38,13 +38,10 @@ namespace forTestHomeWork
                 {
                     Insert(ref arrayOfFoldNumbers, i, 0);
                 }
-
             }
 
             for(int i = 0; i < arrayOfFoldNumbers.Length; i++)
-            {
                 sum = sum + arrayOfFoldNumbers[i];
-            }
 
             Console.WriteLine($"Сумма кратных: {sum}");
         }
