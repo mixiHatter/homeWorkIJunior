@@ -10,11 +10,11 @@ namespace forTestHomeWork
     {
         static void Main(string[] args)
         {
-            for (int i = 5; i <= 96; i+= 7)
-            {
-                Console.WriteLine(i);
-            }
+            int startValue = 5;
+            int maxValue = 96;
+            int step = 7;
+
+            for (int i = startValue; i <= maxValue; i+= step){Console.WriteLine(i);}
         }   
-            
     }
 }
