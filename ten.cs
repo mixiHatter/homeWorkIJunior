@@ -15,7 +15,9 @@ namespace forTestHomeWork
             int step = 7;
 
             for (int i = startValue; i <= maxValue; i+= step)
-            {Console.WriteLine(i);}
+            {
+                Console.WriteLine(i);
+            }
         }   
     }
 }
