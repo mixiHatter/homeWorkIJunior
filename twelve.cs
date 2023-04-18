@@ -26,12 +26,12 @@ namespace forTestHomeWork
             while (isOpen)
             {
                 Console.WriteLine($"Ваш баланс: {moneyDollarBalance} dollars, {moneyRubleBalance} rubles, {moneyYenBalance} yens.");
-                Console.WriteLine("Меню: введите \"конвертировать валюту в валюту\" что бы обменять валюту. Введите \"выход\" что бы выйти.");
+                Console.WriteLine("Меню: \ncommandUsdToRub - конвертировать USD в RUB \ncommandRubToUsd - конвертировать RUB в USD \ncommandUsdToJpy - конвертировать USD в JPY \ncommandRubToJpy - конвертировать RUB в JPY \ncommandJpyToUsd - конвертировать RUB в JPY \ncommandJpyToRub - конвертировать JPY в RUB \nexit - выйти.");
                 userChoose = Console.ReadLine();
 
                 switch (userChoose)
                 {
-                    case "конвертировать доллары в рубли":
+                    case "commandUsdToRub":
                         Console.WriteLine($"Сколько долларов вы хотите перевести в рубли? Доступно: {moneyDollarBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyDollarBalance -= convertNumber;
@@ -39,7 +39,7 @@ namespace forTestHomeWork
                         Console.WriteLine($"Теперь у вас: {moneyDollarBalance} долларов и {moneyRubleBalance} рублей");
                         break;
 
-                    case "конвертировать рубли в доллары":
+                    case "commandRubToUsd":
                         Console.WriteLine($"Сколько рублей вы хотите перевести в доллары? Доступно: {moneyRubleBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyRubleBalance -= convertNumber;
@@ -47,7 +47,7 @@ namespace forTestHomeWork
                         Console.WriteLine($"Теперь у вас: {moneyRubleBalance} рублей и {moneyDollarBalance} долларов ");
                         break;
 
-                    case "конвертировать доллар в йены":
+                    case "commandUsdToJpy":
                         Console.WriteLine($"Сколько долларов вы хотите перевести в йены? Доступно: {moneyDollarBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyDollarBalance -= convertNumber;
@@ -55,7 +55,7 @@ namespace forTestHomeWork
                         Console.WriteLine($"Теперь у вас: {moneyDollarBalance} долларов и {moneyYenBalance} йен");
                         break;
 
-                    case "конвертировать йены в доллары":
+                    case "commandJpyToUsd":
                         Console.WriteLine($"Сколько йен вы хотите перевести в доллары? Доступно: {moneyYenBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyYenBalance -= convertNumber;
@@ -63,7 +63,7 @@ namespace forTestHomeWork
                         Console.WriteLine($"Теперь у вас: {moneyYenBalance} йен и {moneyDollarBalance} долларов");
                         break;
 
-                    case "конвертировать йены в рубли":
+                    case "commandJpyToRub":
                         Console.WriteLine($"Сколько йен вы хотите перевести в рубли? Доступно: {moneyYenBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyYenBalance -= convertNumber;
@@ -71,7 +71,7 @@ namespace forTestHomeWork
                         Console.WriteLine($"Теперь у вас: {moneyYenBalance} йен и {moneyRubleBalance} рублей");
                         break;
 
-                    case "конвертировать рубли в йены":
+                    case "commandRubToJpy":
                         Console.WriteLine($"Сколько рублей вы хотите перевести в йены? Доступно: {moneyRubleBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyRubleBalance -= convertNumber;
@@ -79,7 +79,7 @@ namespace forTestHomeWork
                         Console.WriteLine($"Теперь у вас: {moneyRubleBalance} и {moneyYenBalance}");
                         break;
 
-                    case "выход":
+                    case "exit":
                         isOpen = false;
                         break;
                 }
