@@ -13,6 +13,7 @@ namespace forTestHomeWork
         {
             string name;
             string symbol;
+            string rowOfSybols = "";
             int numbersOfSymbols;
 
             Console.Write("Введите имя: ");
@@ -21,19 +22,14 @@ namespace forTestHomeWork
             Console.Write("Введите символ: ");
             symbol = Convert.ToString(Console.ReadLine());
 
-            for(int i = 0; i < numbersOfSymbols; i++) 
-            {
-                Console.Write(symbol);
-            }
-
-            Console.WriteLine();
-            Console.WriteLine($"{symbol}{name}{symbol}");
-
             for (int i = 0; i < numbersOfSymbols; i++)
             {
-                Console.Write(symbol);
+                rowOfSybols += symbol;
             }
-            Console.WriteLine();
+
+            Console.WriteLine(rowOfSybols);
+            Console.WriteLine($"{symbol}{name}{symbol}");
+            Console.WriteLine(rowOfSybols);
         }
     }
 }
