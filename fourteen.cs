@@ -13,23 +13,20 @@ namespace forTestHomeWork
         {
             string name;
             string symbol;
-            string rowOfSybols = "";
-            int numbersOfSymbols;
+            string rowOfSymbols = "";
+            int edging = 2;
 
             Console.Write("Введите имя: ");
             name = Console.ReadLine();
-            numbersOfSymbols = name.Length + 2;
             Console.Write("Введите символ: ");
             symbol = Console.ReadLine();
 
-            for (int i = 0; i < numbersOfSymbols; i++)
+            for (int i = 0; i < name.Length + edging; i++)
             {
-                rowOfSybols += symbol;
+                rowOfSymbols += symbol;
             }
 
-            Console.WriteLine(rowOfSybols);
-            Console.WriteLine($"{symbol}{name}{symbol}");
-            Console.WriteLine(rowOfSybols);
+            Console.WriteLine($"{rowOfSymbols}\n{symbol}{name}{symbol}\n{rowOfSymbols}");
         }
     }
 }
