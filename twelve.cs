@@ -10,6 +10,14 @@ namespace forTestHomeWork
     {
         static void Main(string[] args)
         {
+            const string СommandUsdToRub = "1";
+            const string СommandUsdToJpy = "2";
+            const string СommandRubToUsd = "3";
+            const string СommandRubToJpy = "4";
+            const string СommandJpyToUsd = "5";
+            const string СommandJpyToRub = "6";
+            const string CommandExit = "7";
+
             float moneyDollarBalance = 100.0F;
             float moneyRubleBalance = 100.0F;
             float moneyYenBalance = 100.0F;
@@ -17,7 +25,7 @@ namespace forTestHomeWork
             float commandUsdToJpy = 132.50F;
             float commandRubToUsd = 0.012F;
             float commandRubToJpy = 1.63F;
-            float commandJpyToUsd = 0.0075F; 
+            float commandJpyToUsd = 0.0075F;
             float commandJpyToRub = 0.62F;
             float convertNumber;
             bool isOpen = true;
@@ -26,60 +34,54 @@ namespace forTestHomeWork
             while (isOpen)
             {
                 Console.WriteLine($"Ваш баланс: {moneyDollarBalance} dollars, {moneyRubleBalance} rubles, {moneyYenBalance} yens.");
-                Console.WriteLine("Меню: \ncommandUsdToRub - конвертировать USD в RUB \ncommandRubToUsd - конвертировать RUB в USD \ncommandUsdToJpy - конвертировать USD в JPY \ncommandRubToJpy - конвертировать RUB в JPY \ncommandJpyToUsd - конвертировать RUB в JPY \ncommandJpyToRub - конвертировать JPY в RUB \nexit - выйти.");
+                Console.WriteLine($"Меню: \n{СommandUsdToRub} - конвертировать USD в RUB \n{СommandUsdToJpy} - конвертировать USD в JPY \n{СommandRubToUsd} - конвертировать RUB в USD  \n{СommandRubToJpy} - конвертировать RUB в JPY \n{СommandJpyToUsd} - конвертировать RUB в JPY \n{СommandJpyToRub} - конвертировать JPY в RUB \n{CommandExit} - выйти.");
                 userChoose = Console.ReadLine();
 
                 switch (userChoose)
                 {
-                    case "commandUsdToRub":
+                    case СommandUsdToRub:
                         Console.WriteLine($"Сколько долларов вы хотите перевести в рубли? Доступно: {moneyDollarBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyDollarBalance -= convertNumber;
                         moneyRubleBalance += convertNumber * commandUsdToRub;
-                        Console.WriteLine($"Теперь у вас: {moneyDollarBalance} долларов и {moneyRubleBalance} рублей");
                         break;
 
-                    case "commandRubToUsd":
+                    case СommandRubToUsd:
                         Console.WriteLine($"Сколько рублей вы хотите перевести в доллары? Доступно: {moneyRubleBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyRubleBalance -= convertNumber;
                         moneyDollarBalance += convertNumber * commandRubToUsd;
-                        Console.WriteLine($"Теперь у вас: {moneyRubleBalance} рублей и {moneyDollarBalance} долларов ");
                         break;
 
-                    case "commandUsdToJpy":
+                    case СommandUsdToJpy:
                         Console.WriteLine($"Сколько долларов вы хотите перевести в йены? Доступно: {moneyDollarBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyDollarBalance -= convertNumber;
                         moneyYenBalance += convertNumber * commandUsdToJpy;
-                        Console.WriteLine($"Теперь у вас: {moneyDollarBalance} долларов и {moneyYenBalance} йен");
                         break;
 
-                    case "commandJpyToUsd":
+                    case СommandJpyToUsd:
                         Console.WriteLine($"Сколько йен вы хотите перевести в доллары? Доступно: {moneyYenBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyYenBalance -= convertNumber;
                         moneyDollarBalance += convertNumber * commandJpyToUsd;
-                        Console.WriteLine($"Теперь у вас: {moneyYenBalance} йен и {moneyDollarBalance} долларов");
                         break;
 
-                    case "commandJpyToRub":
+                    case СommandJpyToRub:
                         Console.WriteLine($"Сколько йен вы хотите перевести в рубли? Доступно: {moneyYenBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyYenBalance -= convertNumber;
                         moneyRubleBalance += convertNumber * commandJpyToRub;
-                        Console.WriteLine($"Теперь у вас: {moneyYenBalance} йен и {moneyRubleBalance} рублей");
                         break;
 
-                    case "commandRubToJpy":
+                    case СommandRubToJpy:
                         Console.WriteLine($"Сколько рублей вы хотите перевести в йены? Доступно: {moneyRubleBalance}");
                         convertNumber = Convert.ToSingle(Console.ReadLine());
                         moneyRubleBalance -= convertNumber;
                         moneyYenBalance += convertNumber * commandRubToJpy;
-                        Console.WriteLine($"Теперь у вас: {moneyRubleBalance} и {moneyYenBalance}");
                         break;
 
-                    case "exit":
+                    case CommandExit:
                         isOpen = false;
                         break;
                 }

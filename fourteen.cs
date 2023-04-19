@@ -17,10 +17,10 @@ namespace forTestHomeWork
             int numbersOfSymbols;
 
             Console.Write("Введите имя: ");
-            name = Convert.ToString(Console.ReadLine());
+            name = Console.ReadLine();
             numbersOfSymbols = name.Length + 2;
             Console.Write("Введите символ: ");
-            symbol = Convert.ToString(Console.ReadLine());
+            symbol = Console.ReadLine();
 
             for (int i = 0; i < numbersOfSymbols; i++)
             {
