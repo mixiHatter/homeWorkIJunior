@@ -14,19 +14,20 @@ namespace forTestHomeWork
             string name;
             string symbol;
             string rowOfSymbols = "";
-            int edging = 2;
+            string middleLine;
 
             Console.Write("Введите имя: ");
             name = Console.ReadLine();
             Console.Write("Введите символ: ");
             symbol = Console.ReadLine();
+            middleLine = symbol + name + symbol;
 
-            for (int i = 0; i < name.Length + edging; i++)
+            for (int i = 0; i < middleLine.Length; i++)
             {
                 rowOfSymbols += symbol;
             }
 
-            Console.WriteLine($"{rowOfSymbols}\n{symbol}{name}{symbol}\n{rowOfSymbols}");
+            Console.WriteLine($"{rowOfSymbols}\n{middleLine}\n{rowOfSymbols}");
         }
     }
 }
