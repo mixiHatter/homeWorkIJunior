@@ -27,7 +27,7 @@ namespace forTestHomeWork
 
             while (isLoggedIn)
             {
-                Console.WriteLine("Menu commands: \n1 - set name \n2 - set password \n3 - write name \n4 - set background \n5 - set font \n6 - exit");
+                Console.WriteLine("Menu commands: \n{MenuSetName} - set name \n{MenuSetPassword} - set password \n{MenuWriteName} - write name \n{MenuSetBackground} - set background \n{MenuSetFont} - set font \n{MenuExit} - exit");
                 userChoose = Console.ReadLine();
 
                 switch (userChoose)
