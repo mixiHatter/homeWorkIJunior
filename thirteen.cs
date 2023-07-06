@@ -18,6 +18,15 @@ namespace forTestHomeWork
             const string MenuSetFont = "5";
             const string MenuExit = "6";
 
+            const string ColorWhite = "1";
+            const string ColorGreen = "2";
+            const string ColorRed = "3";
+            const string ColorBlack = "4";
+            const string ColorBlue = "5";
+            const string ColorReset = "6";
+
+            const string PasswordExit = "exit";
+
             string userName = "";
             string password = "";
             string userInput;
@@ -27,7 +36,7 @@ namespace forTestHomeWork
 
             while (isLoggedIn)
             {
-                Console.WriteLine("Menu commands: \n{MenuSetName} - set name \n{MenuSetPassword} - set password \n{MenuWriteName} - write name \n{MenuSetBackground} - set background \n{MenuSetFont} - set font \n{MenuExit} - exit");
+                Console.WriteLine($"Menu commands: \n{MenuSetName} - set name \n{MenuSetPassword} - set password \n{MenuWriteName} - write name \n{MenuSetBackground} - set background \n{MenuSetFont} - set font \n{MenuExit} - exit");;
                 userChoose = Console.ReadLine();
 
                 switch (userChoose)
@@ -61,7 +70,7 @@ namespace forTestHomeWork
                                     tryPassword = false;
                                 }
 
-                                else if (userInput == "выйти")
+                                else if (userInput == PasswordExit)
                                 {
                                     tryPassword = false;
                                 }
@@ -69,7 +78,7 @@ namespace forTestHomeWork
                                 else
                                 {
                                     Console.WriteLine("Пароль неверный!");
-                                    Console.WriteLine("Если хотите оставить попытку ввести пароль введите \"выйти\"");
+                                    Console.WriteLine($"Если хотите оставить попытку ввести пароль введите {PasswordExit}");
                                 }
                             }
                         }
@@ -104,35 +113,35 @@ namespace forTestHomeWork
                         break;
 
                     case MenuSetBackground:
-                        Console.WriteLine("Choose color: \nWhite \nGreen \nRed \nBlack \nBlue \nreset");
+                        Console.WriteLine($"Choose color: \n{ColorWhite} - White \n{ColorGreen} - Green \n{ColorRed} - Red \n{ColorBlack} - Black \n{ColorBlue} - Blue \n{ColorReset} - reset");
                         userChoose = Console.ReadLine();
 
-                        if (userChoose == "white")
+                        if (userChoose == ColorWhite)
                         {
                             Console.BackgroundColor = ConsoleColor.White;
                         }
 
-                        else if (userChoose == "green")
+                        else if (userChoose == ColorGreen)
                         {
                             Console.BackgroundColor = ConsoleColor.Green;
                         }
 
-                        else if (userChoose == "red")
+                        else if (userChoose == ColorRed)
                         {
                             Console.BackgroundColor = ConsoleColor.Red;
                         }
 
-                        else if (userChoose == "black")
+                        else if (userChoose == ColorBlack)
                         {
                             Console.BackgroundColor = ConsoleColor.Black;
                         }
 
-                        else if (userChoose == "blue")
+                        else if (userChoose == ColorBlue)
                         {
                             Console.BackgroundColor = ConsoleColor.Blue;
                         }
 
-                        else if (userChoose == "reset")
+                        else if (userChoose == ColorReset)
                         {
                             Console.ResetColor();
                         }
@@ -140,35 +149,35 @@ namespace forTestHomeWork
                         break;
 
                     case MenuSetFont:
-                        Console.WriteLine("Choose color: \nWhite \nGreen \nRed \nBlack \nBlue \nreset");
+                        Console.WriteLine($"Choose color: \n{ColorWhite} - White \n{ColorGreen} - Green \n{ColorRed} - Red \n{ColorBlack} - Black \n{ColorBlue} - Blue \n{ColorReset} - reset");
                         userChoose = Console.ReadLine();
 
-                        if (userChoose == "white")
+                        if (userChoose == ColorWhite)
                         {
                             Console.ForegroundColor = ConsoleColor.White;
                         }
 
-                        else if (userChoose == "green")
+                        else if (userChoose == ColorGreen)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
 
-                        else if (userChoose == "red")
+                        else if (userChoose == ColorRed)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                         }
 
-                        else if (userChoose == "black")
+                        else if (userChoose == ColorBlack)
                         {
                             Console.ForegroundColor = ConsoleColor.Black;
                         }
 
-                        else if (userChoose == "blue")
+                        else if (userChoose == ColorBlue)
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
                         }
 
-                        else if (userChoose == "reset")
+                        else if (userChoose == ColorReset)
                         {
                             Console.ResetColor();
                         }
