@@ -24,32 +24,29 @@ namespace forTestHomeWork
             const string ColorBlack = "4";
             const string ColorBlue = "5";
             const string ColorReset = "6";
-
-            const string PasswordExit = "exit";
+            
+            const string MenuPasswordExit = "exit";
 
             string userName = "";
             string password = "";
             string userInput;
             bool isLoggedIn = true;
-            bool tryPassword = true;
+            bool haveTryPassword = true;
             string userChoose;
 
             while (isLoggedIn)
             {
                 Console.WriteLine($"Menu commands: \n{MenuSetName} - set name \n{MenuSetPassword} - set password \n{MenuWriteName} - write name \n{MenuSetBackground} - set background \n{MenuSetFont} - set font \n{MenuExit} - exit");;
                 userChoose = Console.ReadLine();
-
                 switch (userChoose)
                 {
                     case MenuSetName:
                         Console.Write("Write name: ");
                         userName = Console.ReadLine();
-
                         break;
 
                     case MenuSetPassword:
-                        tryPassword = true;
-
+                        haveTryPassword = true;
                         if (password == "")
                         {
                             Console.Write("Введите новый пароль: ");
@@ -59,7 +56,7 @@ namespace forTestHomeWork
 
                         else
                         {
-                            while (tryPassword)
+                            while (haveTryPassword)
                             {
                                 Console.Write("Введите пароль: ");
                                 userInput = Console.ReadLine();
@@ -67,26 +64,24 @@ namespace forTestHomeWork
                                 if (userInput == password)
                                 {
                                     Console.WriteLine("Пароль верный!");
-                                    tryPassword = false;
+                                    haveTryPassword = false;
                                 }
 
-                                else if (userInput == PasswordExit)
+                                else if (userInput == MenuPasswordExit)
                                 {
-                                    tryPassword = false;
+                                    haveTryPassword = false;
                                 }
 
                                 else
                                 {
                                     Console.WriteLine("Пароль неверный!");
-                                    Console.WriteLine($"Если хотите оставить попытку ввести пароль введите {PasswordExit}");
+                                    Console.WriteLine($"Если хотите оставить попытку ввести пароль введите {MenuPasswordExit}");
                                 }
                             }
                         }
-
                         break;
 
                     case MenuWriteName:
-
                         Console.WriteLine("Введите пароль: ");
                         userInput = Console.ReadLine();
 
@@ -109,7 +104,6 @@ namespace forTestHomeWork
                         {
                             Console.WriteLine("Для начала нужно установить имя!");
                         }
-
                         break;
 
                     case MenuSetBackground:
@@ -145,7 +139,6 @@ namespace forTestHomeWork
                         {
                             Console.ResetColor();
                         }
-
                         break;
 
                     case MenuSetFont:
@@ -181,13 +174,11 @@ namespace forTestHomeWork
                         {
                             Console.ResetColor();
                         }
-
                         break;
 
                     case MenuExit:
                         Console.WriteLine("Exit is processing...");
                         isLoggedIn = false;
-
                         break;
                 }
             }
