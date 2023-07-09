@@ -66,7 +66,6 @@ namespace forTestHomeWork
                                     Console.WriteLine("Пароль верный!");
                                     haveTryPassword = false;
                                 }
-
                                 else if (userInput == passwordExit)
                                 {
                                     haveTryPassword = false;
@@ -88,17 +87,14 @@ namespace forTestHomeWork
                         {
                             Console.WriteLine(userName);
                         }
-
                         else if (password == "")
                         {
                             Console.WriteLine("Для начала нужно установить пароль!");
                         }
-
                         else if (password != userInput)
                         {
                             Console.WriteLine("Пароль неверный!");
                         }
-
                         else if (userName == "")
                         {
                             Console.WriteLine("Для начала нужно установить имя!");
@@ -113,27 +109,22 @@ namespace forTestHomeWork
                         {
                             Console.BackgroundColor = ConsoleColor.White;
                         }
-
                         else if (userChoose == MenuColorGreen)
                         {
                             Console.BackgroundColor = ConsoleColor.Green;
                         }
-
                         else if (userChoose == MenuColorRed)
                         {
                             Console.BackgroundColor = ConsoleColor.Red;
                         }
-
                         else if (userChoose == MenuColorBlack)
                         {
                             Console.BackgroundColor = ConsoleColor.Black;
                         }
-
                         else if (userChoose == MenuColorBlue)
                         {
                             Console.BackgroundColor = ConsoleColor.Blue;
                         }
-
                         else if (userChoose == MenuColorReset)
                         {
                             Console.ResetColor();
@@ -148,27 +139,22 @@ namespace forTestHomeWork
                         {
                             Console.ForegroundColor = ConsoleColor.White;
                         }
-
                         else if (userChoose == MenuColorGreen)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
                         }
-
                         else if (userChoose == MenuColorRed)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                         }
-
                         else if (userChoose == MenuColorBlack)
                         {
                             Console.ForegroundColor = ConsoleColor.Black;
                         }
-
                         else if (userChoose == MenuColorBlue)
                         {
                             Console.ForegroundColor = ConsoleColor.Blue;
                         }
-
                         else if (userChoose == MenuColorReset)
                         {
                             Console.ResetColor();
